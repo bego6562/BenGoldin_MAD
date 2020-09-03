@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDAB5EB824FEC2E500DC4D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB5EB724FEC2E500DC4D3E /* AppDelegate.swift */; };
-		CDAB5EBA24FEC2E500DC4D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB5EB924FEC2E500DC4D3E /* SceneDelegate.swift */; };
-		CDAB5EBC24FEC2E500DC4D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB5EBB24FEC2E500DC4D3E /* ViewController.swift */; };
-		CDAB5EBF24FEC2E500DC4D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAB5EBD24FEC2E500DC4D3E /* Main.storyboard */; };
-		CDAB5EC124FEC2E800DC4D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAB5EC024FEC2E800DC4D3E /* Assets.xcassets */; };
-		CDAB5EC424FEC2E800DC4D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAB5EC224FEC2E800DC4D3E /* LaunchScreen.storyboard */; };
+		CDAB5E9824FEA37E00DC4D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB5E9724FEA37E00DC4D3E /* AppDelegate.swift */; };
+		CDAB5E9A24FEA37E00DC4D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB5E9924FEA37E00DC4D3E /* SceneDelegate.swift */; };
+		CDAB5E9C24FEA37E00DC4D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB5E9B24FEA37E00DC4D3E /* ViewController.swift */; };
+		CDAB5E9F24FEA37E00DC4D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAB5E9D24FEA37E00DC4D3E /* Main.storyboard */; };
+		CDAB5EA124FEA38200DC4D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDAB5EA024FEA38200DC4D3E /* Assets.xcassets */; };
+		CDAB5EA424FEA38200DC4D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDAB5EA224FEA38200DC4D3E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CDAB5EB424FEC2E500DC4D3E /* mobileAppleDevelopement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mobileAppleDevelopement.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDAB5EB724FEC2E500DC4D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDAB5EB924FEC2E500DC4D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDAB5EBB24FEC2E500DC4D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CDAB5EBE24FEC2E500DC4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CDAB5EC024FEC2E800DC4D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CDAB5EC324FEC2E800DC4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CDAB5EC524FEC2E800DC4D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDAB5E9424FEA37E00DC4D3E /* daVinci.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = daVinci.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDAB5E9724FEA37E00DC4D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDAB5E9924FEA37E00DC4D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CDAB5E9B24FEA37E00DC4D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDAB5E9E24FEA37E00DC4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDAB5EA024FEA38200DC4D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDAB5EA324FEA38200DC4D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDAB5EA524FEA38200DC4D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CDAB5EB124FEC2E500DC4D3E /* Frameworks */ = {
+		CDAB5E9124FEA37E00DC4D3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CDAB5EAB24FEC2E500DC4D3E = {
+		CDAB5E8B24FEA37E00DC4D3E = {
 			isa = PBXGroup;
 			children = (
-				CDAB5EB624FEC2E500DC4D3E /* mobileAppleDevelopement */,
-				CDAB5EB524FEC2E500DC4D3E /* Products */,
+				CDAB5E9624FEA37E00DC4D3E /* daVinci */,
+				CDAB5E9524FEA37E00DC4D3E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CDAB5EB524FEC2E500DC4D3E /* Products */ = {
+		CDAB5E9524FEA37E00DC4D3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CDAB5EB424FEC2E500DC4D3E /* mobileAppleDevelopement.app */,
+				CDAB5E9424FEA37E00DC4D3E /* daVinci.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CDAB5EB624FEC2E500DC4D3E /* mobileAppleDevelopement */ = {
+		CDAB5E9624FEA37E00DC4D3E /* daVinci */ = {
 			isa = PBXGroup;
 			children = (
-				CDAB5EB724FEC2E500DC4D3E /* AppDelegate.swift */,
-				CDAB5EB924FEC2E500DC4D3E /* SceneDelegate.swift */,
-				CDAB5EBB24FEC2E500DC4D3E /* ViewController.swift */,
-				CDAB5EBD24FEC2E500DC4D3E /* Main.storyboard */,
-				CDAB5EC024FEC2E800DC4D3E /* Assets.xcassets */,
-				CDAB5EC224FEC2E800DC4D3E /* LaunchScreen.storyboard */,
-				CDAB5EC524FEC2E800DC4D3E /* Info.plist */,
+				CDAB5E9724FEA37E00DC4D3E /* AppDelegate.swift */,
+				CDAB5E9924FEA37E00DC4D3E /* SceneDelegate.swift */,
+				CDAB5E9B24FEA37E00DC4D3E /* ViewController.swift */,
+				CDAB5E9D24FEA37E00DC4D3E /* Main.storyboard */,
+				CDAB5EA024FEA38200DC4D3E /* Assets.xcassets */,
+				CDAB5EA224FEA38200DC4D3E /* LaunchScreen.storyboard */,
+				CDAB5EA524FEA38200DC4D3E /* Info.plist */,
 			);
-			path = mobileAppleDevelopement;
+			path = daVinci;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDAB5EB324FEC2E500DC4D3E /* mobileAppleDevelopement */ = {
+		CDAB5E9324FEA37E00DC4D3E /* daVinci */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDAB5EC824FEC2E800DC4D3E /* Build configuration list for PBXNativeTarget "mobileAppleDevelopement" */;
+			buildConfigurationList = CDAB5EA824FEA38200DC4D3E /* Build configuration list for PBXNativeTarget "daVinci" */;
 			buildPhases = (
-				CDAB5EB024FEC2E500DC4D3E /* Sources */,
-				CDAB5EB124FEC2E500DC4D3E /* Frameworks */,
-				CDAB5EB224FEC2E500DC4D3E /* Resources */,
+				CDAB5E9024FEA37E00DC4D3E /* Sources */,
+				CDAB5E9124FEA37E00DC4D3E /* Frameworks */,
+				CDAB5E9224FEA37E00DC4D3E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = mobileAppleDevelopement;
-			productName = mobileAppleDevelopement;
-			productReference = CDAB5EB424FEC2E500DC4D3E /* mobileAppleDevelopement.app */;
+			name = daVinci;
+			productName = daVinci;
+			productReference = CDAB5E9424FEA37E00DC4D3E /* daVinci.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CDAB5EAC24FEC2E500DC4D3E /* Project object */ = {
+		CDAB5E8C24FEA37E00DC4D3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "Ben Goldin";
 				TargetAttributes = {
-					CDAB5EB324FEC2E500DC4D3E = {
+					CDAB5E9324FEA37E00DC4D3E = {
 						CreatedOnToolsVersion = 11.1;
 					};
 				};
 			};
-			buildConfigurationList = CDAB5EAF24FEC2E500DC4D3E /* Build configuration list for PBXProject "mobileAppleDevelopement" */;
+			buildConfigurationList = CDAB5E8F24FEA37E00DC4D3E /* Build configuration list for PBXProject "daVinci" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = CDAB5EAB24FEC2E500DC4D3E;
-			productRefGroup = CDAB5EB524FEC2E500DC4D3E /* Products */;
+			mainGroup = CDAB5E8B24FEA37E00DC4D3E;
+			productRefGroup = CDAB5E9524FEA37E00DC4D3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CDAB5EB324FEC2E500DC4D3E /* mobileAppleDevelopement */,
+				CDAB5E9324FEA37E00DC4D3E /* daVinci */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CDAB5EB224FEC2E500DC4D3E /* Resources */ = {
+		CDAB5E9224FEA37E00DC4D3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAB5EC424FEC2E800DC4D3E /* LaunchScreen.storyboard in Resources */,
-				CDAB5EC124FEC2E800DC4D3E /* Assets.xcassets in Resources */,
-				CDAB5EBF24FEC2E500DC4D3E /* Main.storyboard in Resources */,
+				CDAB5EA424FEA38200DC4D3E /* LaunchScreen.storyboard in Resources */,
+				CDAB5EA124FEA38200DC4D3E /* Assets.xcassets in Resources */,
+				CDAB5E9F24FEA37E00DC4D3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CDAB5EB024FEC2E500DC4D3E /* Sources */ = {
+		CDAB5E9024FEA37E00DC4D3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAB5EBC24FEC2E500DC4D3E /* ViewController.swift in Sources */,
-				CDAB5EB824FEC2E500DC4D3E /* AppDelegate.swift in Sources */,
-				CDAB5EBA24FEC2E500DC4D3E /* SceneDelegate.swift in Sources */,
+				CDAB5E9C24FEA37E00DC4D3E /* ViewController.swift in Sources */,
+				CDAB5E9824FEA37E00DC4D3E /* AppDelegate.swift in Sources */,
+				CDAB5E9A24FEA37E00DC4D3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CDAB5EBD24FEC2E500DC4D3E /* Main.storyboard */ = {
+		CDAB5E9D24FEA37E00DC4D3E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CDAB5EBE24FEC2E500DC4D3E /* Base */,
+				CDAB5E9E24FEA37E00DC4D3E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CDAB5EC224FEC2E800DC4D3E /* LaunchScreen.storyboard */ = {
+		CDAB5EA224FEA38200DC4D3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CDAB5EC324FEC2E800DC4D3E /* Base */,
+				CDAB5EA324FEA38200DC4D3E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CDAB5EC624FEC2E800DC4D3E /* Debug */ = {
+		CDAB5EA624FEA38200DC4D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		CDAB5EC724FEC2E800DC4D3E /* Release */ = {
+		CDAB5EA724FEA38200DC4D3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,62 +280,62 @@
 			};
 			name = Release;
 		};
-		CDAB5EC924FEC2E800DC4D3E /* Debug */ = {
+		CDAB5EA924FEA38200DC4D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = mobileAppleDevelopement/Info.plist;
+				INFOPLIST_FILE = daVinci/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobileAppleDevelopement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daVinci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CDAB5ECA24FEC2E800DC4D3E /* Release */ = {
+		CDAB5EAA24FEA38200DC4D3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = mobileAppleDevelopement/Info.plist;
+				INFOPLIST_FILE = daVinci/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobileAppleDevelopement;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daVinci;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDAB5EAF24FEC2E500DC4D3E /* Build configuration list for PBXProject "mobileAppleDevelopement" */ = {
+		CDAB5E8F24FEA37E00DC4D3E /* Build configuration list for PBXProject "daVinci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDAB5EC624FEC2E800DC4D3E /* Debug */,
-				CDAB5EC724FEC2E800DC4D3E /* Release */,
+				CDAB5EA624FEA38200DC4D3E /* Debug */,
+				CDAB5EA724FEA38200DC4D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CDAB5EC824FEC2E800DC4D3E /* Build configuration list for PBXNativeTarget "mobileAppleDevelopement" */ = {
+		CDAB5EA824FEA38200DC4D3E /* Build configuration list for PBXNativeTarget "daVinci" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDAB5EC924FEC2E800DC4D3E /* Debug */,
-				CDAB5ECA24FEC2E800DC4D3E /* Release */,
+				CDAB5EA924FEA38200DC4D3E /* Debug */,
+				CDAB5EAA24FEA38200DC4D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CDAB5EAC24FEC2E500DC4D3E /* Project object */;
+	rootObject = CDAB5E8C24FEA37E00DC4D3E /* Project object */;
 }

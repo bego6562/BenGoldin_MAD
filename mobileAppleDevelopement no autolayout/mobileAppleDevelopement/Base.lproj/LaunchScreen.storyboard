@@ -15,17 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LauchScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eQz-7K-QZp">
-                                <rect key="frame" x="158" y="396" width="98" height="104"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LauchScreenIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eQz-7K-QZp">
+                                <rect key="frame" x="87" y="306" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mobile Apple Developement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpJ-tw-1cR">
+                                <rect key="frame" x="127" y="421" width="160" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="eQz-7K-QZp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="Dna-wq-P7P"/>
-                            <constraint firstItem="eQz-7K-QZp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="352" id="Mwy-7x-g4u"/>
-                            <constraint firstItem="eQz-7K-QZp" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="QcV-Pz-iv7"/>
-                            <constraint firstItem="eQz-7K-QZp" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VQc-fE-MoK"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
