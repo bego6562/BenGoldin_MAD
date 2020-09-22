@@ -27,13 +27,13 @@ class ViewController: UIViewController {
     func updateImage() {
         if imageControl.selectedSegmentIndex == 0 {
             citizenship.image = UIImage(named: "citizenship")
-            yesVote.text = "A 'yes' vote for Amend. 76 means..."
+            yesVote.text = "A 'yes' vote for Amend. 76 means that people would have to be U.S. citizens to vote in any Colorado elections."
         } else if imageControl.selectedSegmentIndex == 1 {
             citizenship.image = UIImage(named: "abortion")
-            yesVote.text = "A 'yes' vote for Prop. 115 means..."
+            yesVote.text = "A 'yes' vote for Prop. 115 would ban abortion after 22 weeks except if the mother's life was physically endangered. Both the person who recieved and performed the abortion would be punished."
         } else if imageControl.selectedSegmentIndex == 2{
             citizenship.image = UIImage(named: "familyLeave")
-            yesVote.text = "A 'yes' vote for Prop. 118 means..."
+            yesVote.text = "A 'yes' vote for Prop. 118 would allow employees to take up to 12 weeks of paid leave with a maximum of $1,100 per week."
         }
     }
     
