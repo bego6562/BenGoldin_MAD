@@ -48,10 +48,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
         } else {
 
-            if amount >= 0 && amount <= 170000 {
+            if amount >= 0 && amount <= 19751 {
                 taxesDue = 0.1 * amount
                 print(taxesDue)
-            } else if amount >= 19751 && amount <= 80250 {
+            } else if amount > 19751 && amount <= 80250 {
                 taxesDue = Float(0.1 * 19750) + Float(0.12 * (amount - 19750))
                 print(taxesDue)
                 
