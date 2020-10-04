@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -16,7 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var correctOrIncorrectLabel: UILabel!
     @IBOutlet weak var answerOutlet: UISegmentedControl!
     
-    
+    @IBOutlet weak var topSlider: UISlider!
+    @IBOutlet weak var bottomSlider: UISlider!
     
     func populateRandom() { // should be called by nextQuestionButton
         
@@ -56,20 +58,84 @@ class ViewController: UIViewController {
         
         // randomly track out the two numbers
         
+        /*
+        let kerningOne = CGFloat.random(in: -50..<50)
+        let kerningTwo = CGFloat.random(in: -50..<50)
+        let topNumberString = String(topNumber.text!)
+        let bottomNumberString = String(bottomNumber.text!)
         
+        var randomlyTrackedOutTop = Text(topNumberString).tracking(kerningOne)
+        var randomlyTrackedOutBottom = Text(bottomNumberString).tracking(kerningTwo)
+        
+        Text(topNumberString).tracking(kerningOne)
+        */
+        
+        let fontSizeOne = CGFloat.random(in: 6..<40)
+        let fontSizeTwo = CGFloat.random(in: 6..<40)
+    
+        topNumber.font = UIFont.systemFont(ofSize: fontSizeOne)
+        bottomNumber.font = UIFont.systemFont(ofSize: fontSizeTwo)
+        
+       // var randomlyTrackedOutBottom = Text(bottomNumberString).tracking(kerningTwo)
+//        topNumberString = NSAttributedString(string: topNumberString, attributes: [.kern: 3.12])
+//
+//        NSMutableAttributedString(string: topNumberString).kerning =  SwiftUI.kerning(kerningOne)
+//
+//        bottomNumberString!.tracking(kerningTwo)
+//        let fontSizeCGFloat = CGFloat(fontSize)
+//        yesVote.font = UIFont.systemFont(ofSize: fontSizeCGFloat)
         
         // randomly set the bounds of the sliders
     }
     
+    /*
+     @IBOutlet var Slider1Slider: UISlider!
+
+     @IBOutlet var Slider2Slider: UISlider!
+
+     func configureDefaultSlider2() {
+         Slider2Slider.minimumValue = 0
+         Slider2Slider.maximumValue = (30 - slider1)
+         Slider2Slider.value = 0
+         Slider2Slider.continuous = true
+     }
+     func configureDefaultSlider() {
+         Slider1Slider.minimumValue = 0
+         Slider1Slider.maximumValue = (30 - slider2)
+         Slider1Slider.value = 0
+         Slider1Slider.continuous = true
+     }
+     */
+    
+//    func updateSlider() {
+//        topSlider.minimumValue
+//        topSlider.maximumValue
+//        topSlider.value
+//        topSlider.contiuo
+//    }
     
     
     
     @IBAction func topNumberController(_ sender: UISlider) {
         // change the tracking of topNumber
+        let fontSize = sender.value
+        // change lable text size
+        let fontSizeCG = CGFloat(fontSize)
+        topNumber.font = UIFont.systemFont(ofSize: fontSizeCG)
+
+        let topSliderMin = Float.random(in: 6..<20)
+        let botttomSliderMin = Float.random(in: 60...80)
+        
+        
     }
     
     @IBAction func bottomNumberController(_ sender: UISlider) {
         // change the tracking of bottomNumber
+        let fontSize = sender.value
+        // change lable text size
+        let fontSizeCG = CGFloat(fontSize)
+        bottomNumber.font = UIFont.systemFont(ofSize: fontSizeCG)
+        
     }
     
     @IBAction func answerController(_ sender: UISegmentedControl) {
@@ -85,7 +151,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextQuestionButton(_ sender: UIButton) {
-        // call populate random
+        populateRandom()
     }
     
     override func viewDidLoad() {
