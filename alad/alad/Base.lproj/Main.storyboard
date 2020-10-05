@@ -44,9 +44,9 @@
                                 <rect key="frame" x="65" y="654" width="284" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="224"/>
-                                    <segment title="200"/>
-                                    <segment title="700"/>
+                                    <segment title="224" enabled="NO"/>
+                                    <segment title="200" enabled="NO"/>
+                                    <segment title="700" enabled="NO"/>
                                 </segments>
                                 <connections>
                                     <action selector="answerController:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Dh-tV-I8x"/>
@@ -60,8 +60,8 @@
                                     <action selector="nextQuestionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SqF-kz-Hl4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIe-0T-TWY">
-                                <rect key="frame" x="186" y="710" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIe-0T-TWY">
+                                <rect key="frame" x="65" y="710" width="284" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>

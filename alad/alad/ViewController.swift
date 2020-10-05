@@ -20,6 +20,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var topSlider: UISlider!
     @IBOutlet weak var bottomSlider: UISlider!
     
+    
+    
+    var fontSizeTopExternal: Float = 0.0
+    var fontSizeBottomExternal: Float = 0.0
+    
+    var answerLocation = 0
+    
     func populateRandom() { // should be called by nextQuestionButton
         
         // randomly generate two numbers
@@ -42,6 +49,7 @@ class ViewController: UIViewController {
         
         // selecting where the different numbers will go (randomly)
         let randomSegmentOne = Int.random(in: 0...2)
+        answerLocation = randomSegmentOne // we need to get the answers location out of this function
         var randomSegmentTwo = Int.random(in: 0...2)
 
         while randomSegmentOne == randomSegmentTwo {
@@ -86,6 +94,31 @@ class ViewController: UIViewController {
 //        yesVote.font = UIFont.systemFont(ofSize: fontSizeCGFloat)
         
         // randomly set the bounds of the sliders
+        
+        let fontSizeOneFloat = Float(fontSizeOne)
+        
+        let topSliderMin = fontSizeOneFloat
+        let topSliderMax = Float.random(in: 40...80)
+        
+        topSlider.minimumValue = topSliderMin
+        topSlider.maximumValue = topSliderMax
+        topSlider.value = topSliderMin
+        
+        let fontSizeTwoFloat = Float(fontSizeTwo)
+        
+        let bottomSliderMin = fontSizeTwoFloat
+        let bottomSliderMax = Float.random(in: 40...80)
+        
+        bottomSlider.minimumValue = bottomSliderMin
+        bottomSlider.maximumValue = bottomSliderMax
+        bottomSlider.value = bottomSliderMin
+        
+        answerOutlet.setEnabled(false, forSegmentAt: 0)
+        answerOutlet.setEnabled(false, forSegmentAt: 1)
+        answerOutlet.setEnabled(false, forSegmentAt: 2)
+        
+        correctOrIncorrectLabel.text = ""
+    
     }
     
     /*
@@ -106,47 +139,56 @@ class ViewController: UIViewController {
          Slider1Slider.continuous = true
      }
      */
-    
-//    func updateSlider() {
-//        topSlider.minimumValue
-//        topSlider.maximumValue
-//        topSlider.value
-//        topSlider.contiuo
-//    }
-    
-    
-    
+
     @IBAction func topNumberController(_ sender: UISlider) {
         // change the tracking of topNumber
-        let fontSize = sender.value
+        let fontSizeTop = sender.value
+        fontSizeTopExternal = fontSizeTop
         // change lable text size
-        let fontSizeCG = CGFloat(fontSize)
+        let fontSizeCG = CGFloat(fontSizeTop)
         topNumber.font = UIFont.systemFont(ofSize: fontSizeCG)
-
-        let topSliderMin = Float.random(in: 6..<20)
-        let botttomSliderMin = Float.random(in: 60...80)
         
-        
+        controllerEqual()
     }
     
     @IBAction func bottomNumberController(_ sender: UISlider) {
         // change the tracking of bottomNumber
-        let fontSize = sender.value
+        let fontSizeBottom = sender.value
+        fontSizeBottomExternal = fontSizeBottom
         // change lable text size
-        let fontSizeCG = CGFloat(fontSize)
+        let fontSizeCG = CGFloat(fontSizeBottom)
         bottomNumber.font = UIFont.systemFont(ofSize: fontSizeCG)
         
+        controllerEqual()
+        
+    }
+    
+    func controllerEqual() {
+        if fontSizeTopExternal - fontSizeBottomExternal <= 2 && fontSizeTopExternal - fontSizeBottomExternal >= -2 {
+            //answerOutlet.setEnabled(true, forSegmentAt: Int)
+//            func setEnabled(_ enabled: Bool,
+//            forSegmentAt segment: Int)
+            answerOutlet.setEnabled(true, forSegmentAt: 0)
+            answerOutlet.setEnabled(true, forSegmentAt: 1)
+            answerOutlet.setEnabled(true, forSegmentAt: 2)
+        } else {
+            answerOutlet.setEnabled(false, forSegmentAt: 0)
+            answerOutlet.setEnabled(false, forSegmentAt: 1)
+            answerOutlet.setEnabled(false, forSegmentAt: 2)
+        }
     }
     
     @IBAction func answerController(_ sender: UISegmentedControl) {
         // become active if tracking is equal
         
-        
         // does the user select the correct answer?
             // yes: set correctOrIncorrectLabel to correct
             // no: set correctOrIncorrectLabel to false
-        if sender.selectedSegmentIndex == 0 {
+        if sender.selectedSegmentIndex == answerLocation {
+            correctOrIncorrectLabel.text = "Correct. Great Job!"
             // if first button is selected
+        } else {
+            correctOrIncorrectLabel.text = "Incorrect. Try Again!"
         }
     }
     
@@ -157,6 +199,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        populateRandom()
     }
 
 
