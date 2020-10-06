@@ -15,12 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aladLogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="XpP-Mf-872">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aladLogoImage" translatesAutoresizingMaskIntoConstraints="NO" id="XpP-Mf-872">
+                                <rect key="frame" x="73.5" y="388" width="267" height="120"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XpP-Mf-872" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nhq-yA-s4H"/>
+                            <constraint firstItem="XpP-Mf-872" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="rP6-hL-bGK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
