@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">gitHubTestAndroid</string>
+    <string name="text_message">Hello Android</string>
 </resources>
