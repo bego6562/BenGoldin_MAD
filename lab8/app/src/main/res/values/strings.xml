@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">lab8</string>
+    <string name="career_heading">Salary Tracker</string>
+    <string name="radioHourly">Hourly</string>
+    <string name="radioSalaried">Salaried</string>
+    <string name="careerButton">Preview</string>
+    <string name="designCheck">Design</string>
+    <string name="devCheck">Developement</string>
+    <string name="anonymous">Stay Anonymous</string>
+
+    <string-array name="salary">
+        <item>$30k per year</item>
+        <item>$40k per year</item>
+        <item>$50k per year</item>
+        <item>$60k per year</item>
+        <item>$70k per year</item>
+        <item>$80k per year</item>
+    </string-array>
+
+</resources>
