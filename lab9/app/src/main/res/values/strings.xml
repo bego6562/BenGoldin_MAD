@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">lab8</string>
+    <string name="career_heading">Salary Tracker</string>
+    <string name="radioHourly">Hourly</string>
+    <string name="radioSalaried">Salaried</string>
+    <string name="careerButton">Preview</string>
+    <string name="designCheck">Design</string>
+    <string name="devCheck">Developement</string>
+    <string name="anonymous">Stay Anonymous</string>
+    <string name="submitButton">Submit Form</string>
+
+    <string-array name="salary">
+        <item>$30k per year</item>
+        <item>$40k per year</item>
+        <item>$50k per year</item>
+        <item>$60k per year</item>
+        <item>$70k per year</item>
+        <item>$80k per year</item>
+    </string-array>
+    <string name="title_activity_confirm">Confirmation</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="fullnameHint">Full Name</string>
+    <string name="dateHint">Today\'s Date</string>
+
+    <string name="snackAlert">Please select a pay period!</string>
+    <string name="and"> / </string>
+    <string name="fieldList"> in the field(s) of</string>
+    <string name="anonymousData"> Your data will be kept anonymous.</string>
+    <string name="notAnonymous"> Your data will NOT be kept anonymous.</string>
+    <string name="yourPay">Your pay</string>
+    <string name="is"> is </string>
+    <string name="youMake">. You make </string>
+    <string name="youIndicatedYouMake">You indicated you make </string>
+    <string name="pleaseConfirm">. Please confirm below by typing the date and your name.</string>
+
+
+</resources>
