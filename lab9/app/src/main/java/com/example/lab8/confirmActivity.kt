@@ -39,9 +39,8 @@ class confirmActivity : AppCompatActivity() {
         intent.action = Intent.ACTION_VIEW
         intent.data = confirmUrl?.let { Uri.parse(confirmUrl)}
 
-        if (intent.resolveActivity(packageManager) != null) {
-            startActivity(intent)
-        }
+
+        startActivity(intent)
     }
 
     override fun onBackPressed() {
