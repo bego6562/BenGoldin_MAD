@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_confirm.*
 
-class confirmActivity : AppCompatActivity() {
+data class confirmActivity(val name:String = "") : AppCompatActivity() {
 
     private var confirmName:String? = null
     private var confirmUrl:String? = null
