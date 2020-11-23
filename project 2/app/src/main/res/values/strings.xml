@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">alad</string>
+    <string name="directions">Align the numbers, add them together, and select the correct answer!</string>
+    <string name="nextQuestion">Next Question</string>
+</resources>
