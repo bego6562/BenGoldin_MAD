@@ -16,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     private var selectedPosition = 0
     private val REQUEST_CODE = 1
 
+    private var pain:String? = null
+
     var message: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,24 +89,31 @@ class MainActivity : AppCompatActivity() {
 
     fun updateUI() {
         messageTextView.text = message
+        if (pain != null){
+        confirmationTextView.text = pain.toString()}
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         outState.putString("message", message)
+        outState.putString("pain", pain.toString())
         super.onSaveInstanceState(outState)
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         message = savedInstanceState.getString("message", "")
+        pain = savedInstanceState.getString("pain", "")
         updateUI()
     }
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if ((requestCode == REQUEST_CODE) && (resultCode == Activity.RESULT_OK)) {
             confirmationTextView.setText(data?.let { data.getStringExtra("date and name verification") })
-        }
+            pain = data?.let { data.getStringExtra("date and name verification")
+            }
     }
 
-}
+}}

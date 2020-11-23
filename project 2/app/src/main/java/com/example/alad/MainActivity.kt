@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.View
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,13 +14,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // need to resetRandom() here ... not sure how tho
+
     }
 
-    //make state save on rotation
+    //make state save on rotation (and also scroll)
 
-    //XML stuff: add a theme, add font, add launch icon, make a landscape view
+    //XML stuff: add a theme, add font, add launch icon
 
     //figure out why it's delayed to work
+
+    //make landscape view: Android Device Environments, Project 2 small group critiques (37:43)
 
     var answerLocation = 0
     var answer = 0
@@ -155,10 +159,10 @@ class MainActivity : AppCompatActivity() {
             } else {
                 answerTextView.text = "Incorrect. Try Again!"
             }
+        } else {
+            //snack bar
+            val alignSnackbar = Snackbar.make(root_layout, "Please align the numbers first!", Snackbar.LENGTH_SHORT)
+            alignSnackbar.show()
         }
     }
-
-
-
-
 }
