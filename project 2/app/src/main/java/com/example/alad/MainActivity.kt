@@ -13,83 +13,98 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        // need to resetRandom() here ... not sure how tho
+
+
+        // need to resetRandom() here ... not sure how tho (it will currently crash if reset random isn't called before rotating lol)
 
     }
 
-    //make state save on rotation (and also scroll)
-
-    //XML stuff: add a theme, add font, add launch icon
+    //XML stuff: add a theme, add font, add launch icon, make text in kotlin a string resource
 
     //figure out why it's delayed to work
 
     //make landscape view: Android Device Environments, Project 2 small group critiques (37:43)
 
+    // finding correct answer
     var answerLocation = 0
     var answer = 0
+
+    // class level to know when they're equal in controllerEqual
     var fontSizeTopExternal = 0.toFloat()
     var fontSizeBottomExternal = 0.toFloat()
+
+    // class level for save on rotation
+    var topNumberVariable = 0
+    var bottomNumberVariable = 0
+    var randomAnswerOne = 0
+    var randomAnswerTwo = 0
+    var randomSegmentOne = 0
+    var randomSegmentTwo = 0
+    var randomSegmentThree = 0
+    var randomList = listOf(0)
+    var fontSizeOne = 0.toFloat()
+    var fontSizeTwo = 0.toFloat()
+    var valueToTop = 0.toFloat()
+    var valueToBottom = 0.toFloat()
+
+    // where the slider currently is/ where it starts at
+    var topSliderValue = 0.toFloat()
+    var bottomSliderValue = 0.toFloat()
+
+    var externalTextViewAnswer = ""
+
 
     fun resetRandom(view: View) {
         // randomly generate two numbers that will be added together
 
-        val topNumberVariable = (100..400).random() //https://stackoverflow.com/questions/45685026/how-can-i-get-a-random-number-in-kotlin
-        topNumber.setText(topNumberVariable.toString())
-
-        val bottomNumberVariable = (10..99).random()
-        bottomNumber.setText("+ $bottomNumberVariable")
+        topNumberVariable = (100..400).random() //https://stackoverflow.com/questions/45685026/how-can-i-get-a-random-number-in-kotlin
+        bottomNumberVariable = (10..99).random()
 
         // generate correct and incorrect answers
 
         answer = topNumberVariable + bottomNumberVariable // correct answer
-        var randomAnswerOne = (answer-50..answer+50).random() // random answer #1
-        var randomAnswerTwo = (answer-50..answer+50).random() // random answer #2
+        randomAnswerOne = (answer-50..answer+50).random() // random answer #1
+        randomAnswerTwo = (answer-50..answer+50).random() // random answer #2
 
         while (randomAnswerOne == answer || randomAnswerTwo == answer) { // make sure random answer #1 or #2 != answer
             randomAnswerOne = (answer-50..answer+50).random()
             randomAnswerTwo = (answer-50..answer+50).random()
         }
+
         while (randomAnswerOne == randomAnswerTwo) { // make sure random answer #1 an #2 aren't =
-            randomAnswerTwo = (answer-50..answer+50).random()
+            randomAnswerTwo = randomAnswerOne + 5
         }
 
         // creating the randomly ordered indexes
 
-        val randomSegmentOne = (0..2).random()
+        randomSegmentOne = (0..2).random()
         answerLocation = randomSegmentOne
-        var randomSegmentTwo = (0..2).random()
+        randomSegmentTwo = (0..2).random()
 
         while (randomSegmentOne == randomSegmentTwo){
             randomSegmentTwo = (0..2).random()
         }
 
-        val randomSegmentThree = 3 - randomSegmentOne - randomSegmentTwo
-
-        val randomList = listOf(answer, randomAnswerOne, randomAnswerTwo) // using indexes to randomly assign to radio buttons
-
-        // assign correct and incorrect answers to radio buttons
-
-        answerOne.setText(randomList[randomSegmentOne].toString())
-        answerTwo.setText(randomList[randomSegmentTwo].toString())
-        answerThree.setText(randomList[randomSegmentThree].toString())
+        randomSegmentThree = 3 - randomSegmentOne - randomSegmentTwo
 
         // random initial number sizes
 
-        val fontSizeOne = (10..50).random().toFloat()
-        val fontSizeTwo = (10..50).random().toFloat()
+        fontSizeOne = (10..50).random().toFloat()
+        fontSizeTwo = (10..50).random().toFloat()
 
-        topNumber.textSize = fontSizeOne
-        bottomNumber.textSize = fontSizeTwo
+        // randomly generate the upper bound of the slider
 
-        // randomly set the upper bound of the sliders, set the lower bound to font size generated above
+        valueToTop = (50..65).random().toFloat()
+        valueToBottom = (50..65).random().toFloat()
 
-        topSlider.valueFrom = fontSizeOne
-        topSlider.valueTo = (50..65).random().toFloat()
-        topSlider.value = fontSizeOne
 
-        bottomSlider.valueFrom = fontSizeTwo
-        bottomSlider.valueTo = (50..65).random().toFloat()
-        bottomSlider.value = fontSizeTwo
+        topSliderValue = fontSizeOne
+        bottomSliderValue = fontSizeTwo
+
+        // need to set external value to bottom end of slider or the app will crash on rotation since these values otherwise aren't set until topSliderChange()
+
+        fontSizeTopExternal = fontSizeOne
+        fontSizeBottomExternal = fontSizeTwo
 
         // disable radio button & remove label
 
@@ -98,11 +113,50 @@ class MainActivity : AppCompatActivity() {
         answerTwo.isClickable = false
         answerThree.isClickable = false
 
+        // change color of radio buttons to reflect that they're disabled
+
         answerOne.setTextColor(Color.parseColor("#c2c2c2")); //https://stackoverflow.com/questions/4602902/how-to-set-the-text-color-of-textview-in-code
         answerTwo.setTextColor(Color.parseColor("#c2c2c2"));
         answerThree.setTextColor(Color.parseColor("#c2c2c2"));
 
+        // remove any text
+
         answerTextView.setText("")
+
+        updateUI()
+    }
+
+    fun updateUI(){
+
+        // set numbers
+
+        topNumber.setText(topNumberVariable.toString())
+        bottomNumber.setText("+ $bottomNumberVariable")
+
+        randomList = listOf(answer, randomAnswerOne, randomAnswerTwo) // using indexes to randomly assign to radio buttons
+
+        // assign correct and incorrect answers to radio buttons
+
+        answerOne.setText(randomList[randomSegmentOne].toString())
+        answerTwo.setText(randomList[randomSegmentTwo].toString())
+        answerThree.setText(randomList[randomSegmentThree].toString())
+
+        // set random initial number sizes
+
+        topNumber.textSize = topSliderValue
+        bottomNumber.textSize = topSliderValue
+
+        // set bounds on sliders
+
+        topSlider.valueFrom = fontSizeOne
+        topSlider.valueTo = valueToTop
+        topSlider.value = topSliderValue
+
+        bottomSlider.valueFrom = fontSizeTwo
+        bottomSlider.valueTo = valueToBottom
+        bottomSlider.value = bottomSliderValue
+
+        answerTextView.text = externalTextViewAnswer
 
     }
 
@@ -156,13 +210,73 @@ class MainActivity : AppCompatActivity() {
         if (findViewById<RadioButton>(radioId) != null) {
             if (findViewById<RadioButton>(radioId).text == answer.toString()) {
                 answerTextView.text = "Correct. Great Job!"
+                externalTextViewAnswer = "Correct. Great Job!"
             } else {
                 answerTextView.text = "Incorrect. Try Again!"
+                externalTextViewAnswer = "Incorrect. Try Again!"
             }
         } else {
             //snack bar
-            val alignSnackbar = Snackbar.make(root_layout, "Please align the numbers first!", Snackbar.LENGTH_SHORT)
+            val alignSnackbar = Snackbar.make(root_layout, "Please align the numbers before adding them!", Snackbar.LENGTH_SHORT)
             alignSnackbar.show()
         }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("answerLocation", answerLocation)
+        outState.putInt("answer", answer)
+        outState.putFloat("fontSizeTopExternal", fontSizeTopExternal)
+        outState.putFloat("fontSizeBottomExternal", fontSizeBottomExternal)
+
+        outState.putInt("topNumberVariable", topNumberVariable)
+        outState.putInt("bottomNumberVariable", bottomNumberVariable)
+        outState.putInt("randomAnswerOne", randomAnswerOne)
+        outState.putInt("randomAnswerTwo", randomAnswerTwo)
+        outState.putInt("randomSegmentOne", randomSegmentOne)
+        outState.putInt("randomSegmentTwo", randomSegmentTwo)
+        outState.putInt("randomSegmentThree", randomSegmentThree)
+
+        outState.putFloat("fontSizeOne", fontSizeOne)
+        outState.putFloat("fontSizeTwo", fontSizeTwo)
+        outState.putFloat("valueToTop", valueToTop)
+        outState.putFloat("valueToBottom", valueToBottom)
+
+        outState.putFloat("topSliderValue", topSliderValue)
+        outState.putFloat("bottomSliderValue", bottomSliderValue)
+
+        outState.putString("externalTextViewAnswer", externalTextViewAnswer)
+
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        answerLocation = savedInstanceState.getInt("answerLocation")
+        answer = savedInstanceState.getInt("answer")
+        fontSizeTopExternal = savedInstanceState.getFloat("fontSizeTopExternal")
+        fontSizeBottomExternal = savedInstanceState.getFloat("fontSizeBottomExternal")
+
+        topNumberVariable = savedInstanceState.getInt("topNumberVariable")
+        bottomNumberVariable = savedInstanceState.getInt("bottomNumberVariable")
+
+        randomAnswerOne = savedInstanceState.getInt("randomAnswerOne")
+        randomAnswerTwo = savedInstanceState.getInt("randomAnswerTwo")
+        randomSegmentOne = savedInstanceState.getInt("randomSegmentOne")
+        randomSegmentTwo = savedInstanceState.getInt("randomSegmentTwo")
+        randomSegmentThree = savedInstanceState.getInt("randomSegmentThree")
+
+        fontSizeOne = savedInstanceState.getFloat("fontSizeOne")
+        fontSizeTwo = savedInstanceState.getFloat("fontSizeTwo")
+
+        valueToTop = savedInstanceState.getFloat("valueToTop")
+        valueToBottom = savedInstanceState.getFloat("valueToBottom")
+
+        topSliderValue = savedInstanceState.getFloat("fontSizeTopExternal")
+        bottomSliderValue = savedInstanceState.getFloat("fontSizeBottomExternal")
+
+        externalTextViewAnswer = savedInstanceState.getString("externalTextViewAnswer").toString()
+
+        updateUI()
     }
 }
