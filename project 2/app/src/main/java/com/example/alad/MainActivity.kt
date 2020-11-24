@@ -52,12 +52,10 @@ class MainActivity : AppCompatActivity() {
 
     var externalTextViewAnswer = ""
 
-
+    // function used by button
     fun resetRandom(view: View) {
-
         generateRandom()
         updateUI()
-
     }
 
     fun generateRandom(){

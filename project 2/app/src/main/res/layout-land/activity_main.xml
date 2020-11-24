@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="topSliderChange"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/directions"
+            android:layout_width="246dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/directions"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/answerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="filler text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintStart_toStartOf="@+id/button"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="answerChecker"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/answerTextView"
+            app:layout_constraintStart_toStartOf="@+id/answerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/directions">
+
+            <RadioButton
+                android:id="@+id/answerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="answerChecker"
+                android:text="224" />
+
+            <RadioButton
+                android:id="@+id/answerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="answerChecker"
+                android:text="164" />
+
+            <RadioButton
+                android:id="@+id/answerThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="answerChecker"
+                android:text="140" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="resetRandom"
+            android:text="@string/nextQuestion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/bottomSlider"
+            app:layout_constraintTop_toBottomOf="@+id/answerTextView" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/bottomSlider"
+            android:layout_width="331dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="32dp"
+            android:longClickable="true"
+            android:onClick="topSliderChange"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottomNumber" />
+
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/topSlider"
+            android:layout_width="331dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:longClickable="true"
+            android:onClick="topSliderChange"
+            app:labelBehavior="gone"
+            app:layout_constraintBottom_toTopOf="@+id/topNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/topNumber"
+            android:layout_width="84dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="96dp"
+            android:fontFamily="sans-serif-light"
+            android:text="###"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            app:layout_constraintBottom_toTopOf="@+id/bottomNumber"
+            app:layout_constraintEnd_toEndOf="@+id/topSlider"
+            app:layout_constraintTop_toBottomOf="@+id/topSlider" />
+
+        <TextView
+            android:id="@+id/bottomNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginEnd="96dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="+ ##"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+            app:layout_constraintBottom_toTopOf="@+id/bottomSlider"
+            app:layout_constraintEnd_toEndOf="@+id/bottomSlider"
+            app:layout_constraintTop_toBottomOf="@+id/topNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
