@@ -2,4 +2,7 @@
     <string name="app_name">alad</string>
     <string name="directions">Align the numbers, add them together, and select the correct answer!</string>
     <string name="nextQuestion">Next Question</string>
+    <string name="correct">Correct. Great Job!</string>
+    <string name="incorrect">Incorrect. Try Again!</string>
+    <string name="snackAlert">Please align the numbers before adding them!</string>
 </resources>

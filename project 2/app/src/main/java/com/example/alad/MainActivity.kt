@@ -14,12 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-        // need to resetRandom() here ... not sure how tho (it will currently crash if reset random isn't called before rotating lol)
+        // generate random numbers on launch and update UI
+        generateRandom()
+        updateUI()
 
     }
-
-    //XML stuff: add a theme, add font, add launch icon, make text in kotlin a string resource
 
     //figure out why it's delayed to work
 
@@ -55,6 +54,15 @@ class MainActivity : AppCompatActivity() {
 
 
     fun resetRandom(view: View) {
+
+        generateRandom()
+        updateUI()
+
+    }
+
+    fun generateRandom(){
+        externalTextViewAnswer = ""
+
         // randomly generate two numbers that will be added together
 
         topNumberVariable = (100..400).random() //https://stackoverflow.com/questions/45685026/how-can-i-get-a-random-number-in-kotlin
@@ -122,8 +130,6 @@ class MainActivity : AppCompatActivity() {
         // remove any text
 
         answerTextView.setText("")
-
-        updateUI()
     }
 
     fun updateUI(){
@@ -209,15 +215,15 @@ class MainActivity : AppCompatActivity() {
         val radioId = radioGroup.checkedRadioButtonId
         if (findViewById<RadioButton>(radioId) != null) {
             if (findViewById<RadioButton>(radioId).text == answer.toString()) {
-                answerTextView.text = "Correct. Great Job!"
-                externalTextViewAnswer = "Correct. Great Job!"
+                answerTextView.text = getString(R.string.correct)
+                externalTextViewAnswer = getString(R.string.correct)
             } else {
-                answerTextView.text = "Incorrect. Try Again!"
-                externalTextViewAnswer = "Incorrect. Try Again!"
+                answerTextView.text = getString(R.string.incorrect)
+                externalTextViewAnswer = getString(R.string.incorrect)
             }
         } else {
             //snack bar
-            val alignSnackbar = Snackbar.make(root_layout, "Please align the numbers before adding them!", Snackbar.LENGTH_SHORT)
+            val alignSnackbar = Snackbar.make(root_layout, getString(R.string.snackAlert), Snackbar.LENGTH_SHORT)
             alignSnackbar.show()
         }
     }
