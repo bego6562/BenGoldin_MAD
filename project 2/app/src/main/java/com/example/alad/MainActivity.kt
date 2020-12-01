@@ -14,6 +14,25 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        topSlider.addOnChangeListener { slider, value, fromUser ->
+            // Respond to change in slider's value
+            fontSizeTopExternal = value
+            topNumber.textSize = fontSizeTopExternal
+            //bottomNumber.textSize = fontSizeTopExternal
+            Log.i("Top", value.toString())
+
+            controllerEqual()
+        }
+
+        bottomSlider.addOnChangeListener { slider, value, fromUser ->
+            // Respond to change in slider's value
+            fontSizeBottomExternal = value
+            bottomNumber.textSize = fontSizeBottomExternal
+            Log.i("Bottom", value.toString())
+
+            controllerEqual()
+        }
+
         // generate random numbers on launch and update UI
         generateRandom()
         updateUI()
@@ -21,8 +40,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     //figure out why it's delayed to work
-
-    //make landscape view: Android Device Environments, Project 2 small group critiques (37:43)
 
     // finding correct answer
     var answerLocation = 0
@@ -161,39 +178,6 @@ class MainActivity : AppCompatActivity() {
         bottomSlider.value = bottomSliderValue
 
         answerTextView.text = externalTextViewAnswer
-
-    }
-
-    fun topSliderChange(view: View) {
-/*
-        topSlider.addOnSliderTouchListener(object : Slider.OnSliderTouchListener {
-            override fun onStartTrackingTouch(slider: Slider) {
-                // Responds to when slider's touch event is being started
-            }
-
-            override fun onStopTrackingTouch(slider: Slider) {
-                // Responds to when slider's touch event is being stopped
-            }
-        })
-*/
-        topSlider.addOnChangeListener { slider, value, fromUser ->
-            // Respond to change in slider's value
-            fontSizeTopExternal = value
-            topNumber.textSize = fontSizeTopExternal
-            //bottomNumber.textSize = fontSizeTopExternal
-            Log.i("Top", value.toString())
-
-            controllerEqual()
-        }
-
-        bottomSlider.addOnChangeListener { slider, value, fromUser ->
-            // Respond to change in slider's value
-            fontSizeBottomExternal = value
-            bottomNumber.textSize = fontSizeBottomExternal
-            Log.i("Bottom", value.toString())
-
-            controllerEqual()
-        }
 
     }
 
